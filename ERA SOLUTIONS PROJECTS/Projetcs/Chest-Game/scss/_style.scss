@@ -1,0 +1,46 @@
+#container {
+  text-align: center;
+  // background: url(https://i.pinimg.com/originals/84/93/91/8493911dacfeebdc48ec87a1e8623e5c.jpg);
+  height: 100vh;
+}
+
+#gameboard {
+  width: 320px;
+  height: 320px;
+  // background-color: rgb(48, 202, 207);
+  display: flex;
+  flex-wrap: wrap;
+}
+.square {
+  height: 40px;
+  width: 40px;
+  position: relative; //whats is relative ??
+}
+.square svg {
+  //sizing whats inside the square to adjust for it normal size
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+  position: relative;
+  z-index: -9;
+}
+path {
+  position: relative;
+  z-index: -10;
+}
+.piece {
+  position: relative;
+  z-index: 9;
+}
+
+.beige {
+  background-color: rgb(14, 124, 128);
+}
+.brown {
+  background-color: brown;
+}
+.white {
+  // background-color: beige;
+
+  fill: white; //svg work w/ fill
+}

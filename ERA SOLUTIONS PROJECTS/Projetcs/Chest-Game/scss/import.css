@@ -1,0 +1,47 @@
+#container {
+  text-align: center;
+  height: 100vh;
+}
+
+#gameboard {
+  width: 320px;
+  height: 320px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+  height: 40px;
+  width: 40px;
+  position: relative;
+}
+
+.square svg {
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+  position: relative;
+  z-index: -9;
+}
+
+path {
+  position: relative;
+  z-index: -10;
+}
+
+.piece {
+  position: relative;
+  z-index: 9;
+}
+
+.beige {
+  background-color: rgb(14, 124, 128);
+}
+
+.brown {
+  background-color: brown;
+}
+
+.white {
+  fill: white;
+}/*# sourceMappingURL=import.css.map */
