@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/import.css" />
+    <title>To Do List</title>
+  </head>
+
+  <body id="container">
+    <h1 class="header1">Welcome to my ToDo List</h1>
+    <br />
+    <div class="container">
+      <div class="header2">
+        <h2>To-Do List</h2>
+        <img
+          class="img-header"
+          src="./png/transparent-notebook-notes-paper-clips-pencil-ruler-colorful-notebook-with-notes-and-paper-clips65769a35a81583.5739412217022715416885.png"
+        />
+      </div>
+      <div class="todo-body">
+        <input
+          type="text"
+          id="todoText"
+          class="todo-input"
+          placeholder="Add your items"
+        />
+        <img
+          src="./png/add.png"
+          alt=""
+          id="addUpdateClick"
+          onclick="createToDoItem();"
+        />
+      </div>
+      <h5 class="Alert" id="Alert"></h5>
+      <ul id="list-items" class="list-items"></ul>
+    </div>
+
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>
