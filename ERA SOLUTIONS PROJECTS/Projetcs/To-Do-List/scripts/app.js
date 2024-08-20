@@ -11,32 +11,20 @@ if (todo && todo.length > 0) {
 //
 function createToDoItem() {
   console.log("todoValue", todoValue.value);
-  //step1.verify its not empty, step2.  confirm that isPresent is set to false to let the compoter there is womthing there //push item into array . push
-  if (todoValue.value !== "") {
-    //lets take the happy route first , if input isnt empty , push the input into the todo local storage
+  //step1.verify its not empty,
+  if (todoValue.value !== "") {//lets take the happy route first , if input isnt empty , push the input into the todo local storage
     todoAlert.innerHTML = "";
     todo.push(todoValue.value);
     localStorage.setItem("todo-list", JSON.stringify(todo)); //setting my inouts into the local memory
     console.log("todo json", todo);
     renderToDoItem();
-    // setTimeout(function () {
-    //   todoAlert.innerHTML = "Todo item Created Successfully!";
-    // }, 2000);
-    //write andn append the list
-    // add input into my Ul in form of Li
-    // forEach();
   } else {
     todoAlert.innerHTML = "Please enter what you need to do :)";
     console.log(todoAlert.innerHTML);
-    // setTimeout(function () {
-    //   todoAlert.innerHTML = "";
-    // }, 3000);
     //step 2 is setting a default vlaue so when is the value is true we can activate the corect message
   }
-  //verify its not already in the todo list
-  //if its not empty and not in the to do list
+  
 }
-//creating
 function renderToDoItem() {
   let html = "";
   todo.forEach((item, index) => {
@@ -82,10 +70,8 @@ function updateToDoItems(index, el) {
 }
 
 function saveToDoItem(index, newValue) {
-  //i want to save and replace the current value with the index location.
   console.log("in savetodo", index, newValue);
-  //const newTodo = [...todo.slice(0, index), newValue, ...todo.slice(index)];
-
+ 
   todo[index] = newValue;
   saveToLocalStorage();
   renderToDoItem();
@@ -111,4 +97,4 @@ function CompleteToDoItem(e) {
   } //when this becomes turue later on add to delete after 24 hours
 }
 
-//so if we want to delete we need to capture the value thats inside of the list.
+
